@@ -1,21 +1,11 @@
 {
-  "name": "vue2-breeze",
-  "version": "0.1.2",
-  "description": "是一款基于vue2的可用于项目开发的实用组件库，目前有水印组件，支持按需引入",
-  "main": "dist/breeze.umd.js",
-  "keywords": [
-    "vue",
-    "ui",
-    "components",
-    "watermark"
-  ],
-  "author": "wangbingwen",
-  "files": [
-    "dist",
-    "components"
-  ],
+  "name": "examples",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "build:com": "vue-cli-service build --target lib --name breeze ./components/index.js"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "core-js": "^3.8.3",
@@ -29,8 +19,6 @@
     "@vue/cli-service": "~5.0.0",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3",
-    "sass": "^1.62.1",
-    "sass-loader": "^13.2.2",
     "vue-template-compiler": "^2.6.14"
   },
   "eslintConfig": {

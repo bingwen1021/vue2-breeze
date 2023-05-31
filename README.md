@@ -1,24 +1,30 @@
 # vue2-breeze
 
-## Project setup
+是一款基于 vue2 的可用于项目开发的实用组件库，目前有水印组件，支持按需引入
+
+## Install
+
+使用如下命令进行安装：
+
 ```
-npm install
+npm install vue2-breeze
 ```
 
-### Compiles and hot-reloads for development
+## Use
+
+在`main.js`文件中按如下方式进行引用：
+
 ```
-npm run serve
+import breeze from "vue2-breeze";
+import "vue2-breeze/dist/breeze.css"; // 全局引入样式
+
+Vue.use(breeze);
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+若想按需引入，以水印组件为例，可按如下方式进行引用：
 
-### Lints and fixes files
 ```
-npm run lint
-```
+import watermark from "vue2-breeze/components/watermark";
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Vue.use(watermark);
+```
