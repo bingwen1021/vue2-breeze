@@ -1,8 +1,9 @@
 # vue2-breeze
 
 是一款基于 vue2 的可用于项目开发的实用组件库，目前有水印组件，支持按需引入
-[GitHub](https://github.com/bingwen1021/vue2-breeze.git)
-[使用文档](https://bingwen1021.github.io/vue2-breeze/)
+
+- [GitHub](https://github.com/bingwen1021/vue2-breeze.git)
+- [使用文档](https://bingwen1021.github.io/vue2-breeze/)
 
 ## Install
 
