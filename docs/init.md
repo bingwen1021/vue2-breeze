@@ -1,8 +1,4 @@
-# vue2-breeze
-
-是一款基于 vue2 的可用于项目开发的实用组件库，目前有水印组件，支持按需引入
-
-## Install
+# Install
 
 使用如下命令进行安装：
 
@@ -10,7 +6,7 @@
 npm install vue2-breeze
 ```
 
-## Use
+# Use
 
 在`main.js`文件中按如下方式进行引用：
 

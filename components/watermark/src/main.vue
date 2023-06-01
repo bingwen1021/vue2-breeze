@@ -16,33 +16,55 @@ export default {
       type: Array,
       default: () => ["hellobreeze"],
     },
-    styleConfig: {
-      type: Object,
-      default: () => ({
-        textAlign: "left",
-        fontSize: 12,
-        fontColor: "rgba(0,0,0,0.15)",
-        canWidth: 195,
-        canHeight: 100,
-      }),
+    textBaseline: {
+      type: String,
+      default: "Middle",
+    },
+    textAlign: {
+      type: String,
+      default: "left",
+    },
+    fontSize: {
+      type: Number,
+      default: 12,
+    },
+    fontColor: {
+      type: String,
+      default: "rgba(0,0,0,0.2)",
+    },
+    lineSpace: {
+      type: Number,
+      default: 1.2,
+    },
+    canWidth: {
+      type: Number,
+      default: 195,
+    },
+    canHeight: {
+      type: Number,
+      default: 100,
+    },
+    adjustScale: {
+      type: Number,
+      default: 0.8,
     },
   },
   methods: {
     renderWatermark() {
       let can = document.createElement("canvas");
-      can.width = this.styleConfig.canWidth;
-      can.height = this.styleConfig.canHeight;
+      can.width = this.canWidth;
+      can.height = this.canHeight;
       let cans = can.getContext("2d");
       cans.rotate((-20 * Math.PI) / 180);
-      cans.font = `${this.styleConfig.fontSize}px Microsoft JhengHei`;
-      cans.textBaseline = "Middle";
-      cans.textAlign = this.styleConfig.textAlign;
-      cans.fillStyle = this.styleConfig.fontColor;
+      cans.font = `${this.fontSize}px Microsoft JhengHei`;
+      cans.textBaseline = this.textBaseline;
+      cans.textAlign = this.textAlign;
+      cans.fillStyle = this.fontColor;
       this.textList.forEach((text, index) => {
         cans.fillText(
           text,
           0,
-          (4 * can.height) / 5 + index * 1.5 * this.styleConfig.fontSize
+          this.adjustScale * can.height + index * this.lineSpace * this.fontSize
         );
       });
       const url = can.toDataURL("image/png");
