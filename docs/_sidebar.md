@@ -2,7 +2,7 @@
 
 - :bulb: 入门
 
-  - [快速开始](init.md)
+  - [快速开始](start.md)
 
 - :eyes: 组件
 
